@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Boostrap</title>
+	<meta name="description" content="An infinitely hypnotic canvas animation">
+	<meta name="author" content="Hakim El Hattab">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+	<meta charset="utf-8">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container"">
+
+
+											
+	<br><br>
+	<p></p>
+	<br><br>
+											
+<!-- 	<div class="row">
+		<div class="game-space"></div>
+		<div class="game-space"></div>
+		<div class="game-space"></div>
+	</div>
+	<div class="row">
+		<div class="game-space"></div>
+		<div class="game-space"></div>
+		<div class="game-space"></div>
+	</div>
+	<div class="row">
+		<div class="game-space"></div>
+		<div class="game-space"></div>
+		<div class="game-space"></div>
+	</div>
+</div>
+ -->
+
+		<!-- 
+		<div class="game">
+			<div class="board">
+				<div class="square top left"><div></div></div>
+				<div class="square top"><div></div></div>
+				<div class="square top right"><div></div></div>
+				<div class="square left"><div></div></div>
+				<div class="square"><div></div></div>
+				<div class="square right"><div></div></div>
+				<div class="square bottom left"><div></div></div>
+				<div class="square bottom"><div></div></div>
+				<div class="square bottom right"><div></div></div>
+			</div>
+			<div class="restart"></div>
+		</div> -->
+<!-- 		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<div class="scores p1">
+			<p class="player1"><span class="p1">Player</span><span class="p2">Player 1</span> (<span class="x"></span>)<span class="score">0</span></p>
+			<p class="ties">Ties<span class="score">0</span></p>
+			<p class="player2"><span class="p1">Computer</span><span class="p2">Player 2</span> (<span class="o"></span>)<span class="score">0</span></p>
+			<div class="swap">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+					<g fill="#fff">
+					</g>
+				</svg>
+			</div>
+		</div> -->
+	<div class="main-container">
+
+
+			<!-- <p>Hypnos by <a href="http://twitter.com/hakimel">@hakimel</a> / <a href="http://hakim.se">http://hakim.se</a></p> -->
+			<!-- <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" title="Twitter Tweet Button" src="http://platform.twitter.com/widgets/tweet_button.39f7ee9fffbd122b7a37a520dbdaebc6.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2Flab.hakim.se%2Fhypnos%2F&amp;size=m&amp;text=Hypnos%3A%20An%20infinite%20hypnotic%20animation%20from%20%40hakimel&amp;time=1476391733951&amp;type=share&amp;url=http%3A%2F%2Flab.hakim.se%2Fhypnos%2F" style="position: static; visibility: visible; width: 61px; height: 20px;" data-url="http://lab.hakim.se/hypnos/"></iframe> -->
+
+			<!-- You need this canvas or the circle will disapear  -->
+	<canvas width="600" height="600"></canvas>
+			<!-- All 6 of my buttons along with the color changing ability -->
+
+
+
+		<button type="button" style="background-color:yellow" onclick="yellow()" class="tmn touchMeNot"></button>
+
+		
+		<button type="button" style="background-color:red" onclick="red()" class="tmn touchMeNot1"></button>
+
+
+		<button type="button" style="background-color:blue" onclick="blue()" class="tmn touchMeNot2"></button>
+
+		
+		<button type="button" style="background-color:orange" onclick="orange()" class="tmn touchMeNo3"></button>
+
+		
+		<button type="button" style="background-color:violet" onclick="violet()" class="tmn touchMeNot4"></button>
+
+		
+		<button type="button" style="background-color:green" onclick="green()" class="tmn touchMeNot5"></button>
+	</div>
+
+	<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script id="twitter-wjs" src="http://platform.twitter.com/widgets.js"></script><script>
+
+	</script>
+
+	<script src="http://hakim.se/assets/promoter/promoter.js"></script>
+
+	<!-- Third party -->
+
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-15240703-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+	<iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;"></iframe>
+	<div id="TTT"><a href="index2.html">Tic Tac Toe!</a>
+	
+	</div>
+
+<!-- without this bottom part the buttons wont work on changing the background color -->
+	<script type="text/javascript"><!--
+
+
+			
+
+		function yellow()
+		{
+		document.body.style.backgroundColor="yellow"
+		}
+		function red()
+		{
+		document.body.style.backgroundColor="red"
+		}
+		function blue()
+		{
+		document.body.style.backgroundColor="blue"
+		}
+		function orange()
+		{
+		document.body.style.backgroundColor="orange"
+		}
+		function violet()
+		{
+		document.body.style.backgroundColor="violet"
+		}
+		function green()
+		{
+		document.body.style.backgroundColor="green"
+		}
+
+	</script>
+
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<script src="app.js"></script>
+	<script src="hypnos.js"></script>
+</body>
+</html>
